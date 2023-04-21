@@ -72,20 +72,71 @@ using System.Linq;                              //Consulta integrada en el Lengu
 
 
 
-using System;
+/*       using System;
 class Program
 {
-    static void Main()
-    {
-        Console.WriteLine("Main caller. Press ENTER when ready to call Add.");
-        Console.ReadLine();
-        var sum = Add(30, 12);
+   static void Main()
+   {
+       Console.WriteLine("Main caller. Press ENTER when ready to call Add.");
+       Console.ReadLine();
+       var sum = Add(30, 12);          // sumas de 2 numeros
 
-        Console.WriteLine(sum);
-        Console.WriteLine("Press ENTER to exit program.");
-        Console.ReadLine();
-    }
-    static int Add(int a, int b) {
-    return (a + b);
-    }
+       Console.WriteLine(sum);             //resultado por consola
+       Console.WriteLine("Press ENTER to exit program.");
+       Console.ReadLine();
+   }
+   static int Add(int a, int b) {              //metodo separado llamado add para realizar esa aritmetica.
+   return (a + b);
+   }
+}                                       compilaicon de JIT    (muestra )       */
+
+
+
+
+
+/* F# lenguaje funcional particularmente adecuado para dominios (muestra)
+namespace fscalc
+    type public Calculator = 
+    static member Add (a : double, bool : double) = a + b
+    static member Subtract (a : double, b : doubñle) = a - b
+    static member Multiply (a : double, b : doubñle) = a * b
+    static member Divide (a : double, b : doubñle) = a / b
+*/
+
+
+
+
+
+/*  Class Program {
+ *  static void Main()
+ *  {
+ *  System.Console.WriteLine("Hello, Word!");       //  Codigo de una sola linea.
+ *  }
+ *  }
+ */
+
+
+
+/*  using System;
+Console.WriteLine("Hello, world!");
+for (var n = 0; n < args.Length; n++)
+{
+    Console.WriteLine($"args[{n}] = {args[n]}");            //Interpolación de cadenas
 }
+return 0; 
+*/
+
+
+/* public class Point           //Point.cs
+ {
+private int _x;
+private int _y;
+
+public int x
+{
+get { return _x; }
+set {_x = value; }
+}
+
+public override string ToString() {
+return $"({x}, {Y}";
