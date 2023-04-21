@@ -1,19 +1,21 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-/*using System;
+/*  using System;
 namespace MyFirstProgram
 {
-    class Program
-    {
-        static void Main(string[] args)
-        {
+  class Program
+  {
+      static void Main(string[] args)
+      {
 
-
-            Console.WriteLine("Hello Wordl!");
-    }
-    }
-} */
-
+          Console.ForegroundColor = ConsoleColor.DarkGreen;
+          Console.BackgroundColor = ConsoleColor.Yellow;
+          Console.Clear();
+          Console.WriteLine("Hello Wordl!");
+          Console.WriteLine("Hello William");               //Metodos y propiesdas de la clase Console. (icono de caja son metodos, icono de rayo son eventos, icono de llave son propiedades
+      }
+  }
+}           */
 
 
 
@@ -47,8 +49,8 @@ class Program
     }
 }   */
 
-
-using System;
+/*
+using System;                                //{nombres de espacio}
 using System.Linq;                              //Consulta integrada en el Lenguaje  deberia definir de esta manera al metodo agregado
     class Program
 { 
@@ -66,3 +68,7 @@ using System.Linq;                              //Consulta integrada en el Lengu
     Console.WriteLine(sum);
 }
 }
+*/
+
+
+
