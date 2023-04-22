@@ -127,16 +127,43 @@ return 0;
 */
 
 
-/* public class Point           //Point.cs
- {
+/* public class Point           //Point.cs                                                                Program.cs
+ {                                                                           
 private int _x;
 private int _y;
 
-public int x
+public int X
 {
 get { return _x; }
-set {_x = value; }
+set { _x = value; }
+}
+public int Y                                                                |       var pt = new Point { X = 30, Y = 12 };
+{                                                                           |       System.Console.WriteLine(pt.ToString());
+get { return _y; }
+set { _y = value; } 
 }
 
 public override string ToString() {
-return $"({x}, {Y}";
+return $"({x}, {Y}";          
+}
+ }                      */ 
+
+
+
+
+/*
+enum Generation { BabyBoomer, GenX, Millenial, GenZ, GenA }
+class Person
+{
+    public int BirthYear { get; set; }
+
+    public Generation Generation =>    //curp
+        BirthYear switch                // La expresión que se usa aquí se llama expresión de cambio
+        {
+            (>= 1946) and (<= 1964) => Generation.BabyBoomer,
+            (>= 1965) and (<= 1980) => Generation.GenX,
+            (>= 1981) and (<= 1996) => Generation.Millenial,
+            (>= 1997) and (<= 2012) => Generation.GenZ,
+            _ => Generation.GenA
+        };
+}                   */
