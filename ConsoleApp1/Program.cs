@@ -146,7 +146,7 @@ set { _y = value; }
 public override string ToString() {
 return $"({x}, {Y}";          
 }
- }                      */ 
+ }                      */
 
 
 
@@ -167,3 +167,47 @@ class Person
             _ => Generation.GenA
         };
 }                   */
+
+/*
+// Aquí hay algunas pruebas sobre cómo trabajar con identificadores válidos en C#
+//Podemos escribir comentarios en esta linea 
+
+Console.WriteLine("Welcomoe to Bethany´s Pie Shop HRM");
+Console.WriteLine("Please enter your name");
+
+//El siguiente aceptará el nombre
+string name = Console.ReadLine();
+string name2 = Console.ReadLine();
+string name_2 = Console.ReadLine();
+// string 2Name = Console.ReadLine();                  no funciona por la sintaxis 
+*/
+
+
+
+
+
+
+// Creating an Integer Value            "int a = 2;int b = a + 3;"
+
+/* int monthlyWane = 1234;
+ int months = 12, bonus = 1000;
+bool isActive = true;
+double rating = 99.25;
+*/
+
+// byte numberOfEmployes = 300;
+/*
+int hoursWorked;
+hoursWorked = 125;
+hoursWorked = 148;
+//monthlyWane = true;
+*/
+
+
+/*
+const double interestRate = 0.07;                // declarando  la "constante "
+
+ 
+ 
+ 
+ */
