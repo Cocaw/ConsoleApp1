@@ -170,15 +170,15 @@ class Person
 
 /*
 // Aquí hay algunas pruebas sobre cómo trabajar con identificadores válidos en C#
-//Podemos escribir comentarios en esta linea 
+//En las siguientes Lineas se encuentra la app creada del curso.
 
 Console.WriteLine("Welcomoe to Bethany´s Pie Shop HRM");
-Console.WriteLine("Please enter your name");
+//Console.WriteLine("Please enter your name");
 
 //El siguiente aceptará el nombre
-string name = Console.ReadLine();
-string name2 = Console.ReadLine();
-string name_2 = Console.ReadLine();
+//string name = Console.ReadLine();
+//string name2 = Console.ReadLine();
+//string name_2 = Console.ReadLine();
 // string 2Name = Console.ReadLine();                  no funciona por la sintaxis 
 */
 
@@ -189,7 +189,7 @@ string name_2 = Console.ReadLine();
 
 // Creating an Integer Value            "int a = 2;int b = a + 3;"
 
-/* int monthlyWane = 1234;
+/* var monthlyWane = 1234;
  int months = 12, bonus = 1000;
 bool isActive = true;
 double rating = 99.25;
@@ -215,9 +215,9 @@ string firstName = "Bethany";
 string lastName = "Smith";
 
 string emptyString = "";          //conjunto vacio 
-
-Console.WriteLine("Please enter your name)
-string name = Console.ReadLine();
+string s;
+s = firstName;
+//string name = Console.ReadLine();
 */
 
 
@@ -228,8 +228,67 @@ int numberOfHoursWorked = 165;     // horas trabajadas
 double currentMonthWage = ratePerHour * numberOfHoursWorked "+ bonus";    //tarifa por hora multiplicada // "agregue el bonus de liena 193"
 Console.WriteLine(currentMonthWage);  //resultado mostrado en consola 2036,1 
 
-ratePerHour +=; //= ratePerHour = ratePerHour + 3;  //operador compuesto
+ratePerHour += 3; //= ratePerHour = ratePerHour + 3;  //operador compuesto
 Console.WriteLine(ratePerHour);   // resultado por consola 15.34
+
+if (currentMonthWage > 2000)                        //verdadero o falso
+    console.WriteLine("Top paid employe);
+
+int numberOfEmployees = 15;
+numberOfEmployees--;
+Console.WriteLine(numberOfEmployees);
+
+//Members on Primitive Types
+int intMaxValue = int.MaxValue;
+int intMinValue = int.MinValue;
+
+//Members of char type
+char userSelection = "a";
+
+char upperVersion = char.ToUpper(userSelection);
+
+bool isDigit = char.IsDigit(userSelection);
+
+bool isLetter = char.IsLetter(userSelection);
+
+
+// otros tipos de datos  "DataTime; TimeSpace"
+
+DateTime hireDate = new DateTime(2022, 3, 28, 14, 30, 0);               
+Console.WriteLine(hireData);
+
+DateTime exitDate = new DateTime(2025, 12, 11);
+
+//DateTime invaliDate = new DateTime(2025, 15, 11);
+
+DateTime startDate = hireDate.AddDays(15);
+Console.WriteLine(startDate);
+
+var currentData = DateTime.Now;
+bool areWeInDst = currentDate.IsDayLightSavingTime();
+
+DateTime startHour = DateTime.Now;
+TimeSpace workTime = new TimeSpan(8, 35, 0);
+DateTime endHour = startHour.Add(workTime);
+
+
+Console.WriteLine(startHours);
+Console.writeLine(endHour);
+
+
+Console.WriteLine(startHour.ToLongDateString());
+Console.WriteLine(endHour.ToShortTimeString());
+
+Long veryLongMonth = numberOfHoursWorked; // works fine!
+
+double d = 123456789.0;
+int x = (int)d;
+
+int intVeryLongMonth = (int)veryLongMonth;//night fail
+
+Console.ReadLine();
+
 
 */
 
+//cierre modulo 3

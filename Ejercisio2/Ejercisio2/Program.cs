@@ -50,4 +50,41 @@ int a = 1;
 a += 3;
 
 
+//11.
+char aChar = 'b';
+
+
+//12.
+char aChar = 'a';
+bool isWhiteSpace = char.IsWhiteSpace(aChar);
+
+
+//13.
+
+
+
+//14.
+long myLargeValue = 123456789;
+int intValue = (int)myLargeValue;
+
+
+//15
+var a = 10;
+
+
 */
+
+//EJERCICIO N° 2  Resumen de lo aprendido 
+                                                //suma de variables 
+/*Console.WriteLine("Enter a first value:");
+string stringValue1 = Console.ReadLine();
+
+Console.WriteLine("Enter a second value:");
+string stringValue2 = Console.ReadLine();
+
+int intValue1 = int.Parse(stringValue1);
+int intValue2 = int.Parse(stringValue2);
+
+int var sum = intValue1 + intValue2;
+*/
+
