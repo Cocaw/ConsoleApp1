@@ -17,21 +17,37 @@ Console.WriteLine("Hello " + name);
 
 
 /*
-//03 variable int                       
+//03. variable int                       
 
 int age = 45; 
 
-// 04.1
+// 04.
 string input = Console.ReadLine();
 
-// 05
+// 05.
 bool isActive = false;
 
 
-//06
+//06.
 decimal price = 100.0m;
 
-//07
+//07.
+const double profitMargin = 0.17;
+
+//08.
+string greeting = "Hello";
+
+
+//09.
+int a = 3;
+int b = 5;
+int c = a + b;
+
+
+
+//10.
+int a = 1;
+a += 3;
 
 
 */

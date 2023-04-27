@@ -206,8 +206,30 @@ hoursWorked = 148;
 
 /*
 const double interestRate = 0.07;                // declarando  la "constante "
-
- 
- 
- 
+//interestRate = 0.08;
  */
+
+
+/*Creating basic string
+string firstName = "Bethany";
+string lastName = "Smith";
+
+string emptyString = "";          //conjunto vacio 
+
+Console.WriteLine("Please enter your name)
+string name = Console.ReadLine();
+*/
+
+
+/* Using Arithmetic Operators
+ double ratePerhour = 12.34;
+int numberOfHoursWorked = 165;     // horas trabajadas
+
+double currentMonthWage = ratePerHour * numberOfHoursWorked "+ bonus";    //tarifa por hora multiplicada // "agregue el bonus de liena 193"
+Console.WriteLine(currentMonthWage);  //resultado mostrado en consola 2036,1 
+
+ratePerHour +=; //= ratePerHour = ratePerHour + 3;  //operador compuesto
+Console.WriteLine(ratePerHour);   // resultado por consola 15.34
+
+*/
+
