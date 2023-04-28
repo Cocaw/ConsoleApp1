@@ -75,7 +75,7 @@ var a = 10;
 */
 
 //EJERCICIO N° 2  Resumen de lo aprendido 
-                                                //suma de variables 
+//suma de variables 
 /*Console.WriteLine("Enter a first value:");
 string stringValue1 = Console.ReadLine();
 
@@ -88,3 +88,20 @@ int intValue2 = int.Parse(stringValue2);
 int var sum = intValue1 + intValue2;
 */
 
+
+
+/* "2° parte de las lista de ejercicios 
+ 
+//16.  
+bool validAge = age > 18;
+
+
+//17.
+bool validAge = (age <= 65);
+
+
+//18.
+bool validAge = (age >= 18 && age <= 65); 
+
+
+//19.
