@@ -105,3 +105,52 @@ bool validAge = (age >= 18 && age <= 65);
 
 
 //19.
+if (age > 18)
+{
+    Console.WriteLine("You are eligible");
+    Console.WriteLine("Congratulations");
+}
+
+//20.
+if (age > 18)
+{
+    Console.WriteLine("You are eligible");
+    Console.WriteLine("Congratulations");
+}
+else
+{
+    Console.WriteLine("You aren't eligible");
+    Console.WriteLine("Sorry");
+}
+
+//21.
+int age = 18; // Ejemplo de valor de edad
+
+if (age == 18)
+{
+    Console.WriteLine("You are eligible");
+    Console.WriteLine("Congratulations");
+}
+
+//EJERCICIO N°3 RESUMEN de todo lo aprendido en el Modulo
+Console.WriteLine("Enter a first number:");
+string stringValue1 = Console.ReadLine();
+
+Console.WriteLine("Enter a second number:");
+string stringValue2 = Console.ReadLine();
+
+int intValue1 = int.Parse(stringValue1);
+int intValue2 = int.Parse(stringValue2);
+
+if (intValue1 == intValue2)
+{
+    Console.WriteLine("The values are equal!");
+}
+else if (intValue1 < intValue2)
+{
+    Console.WriteLine("The first value is smaller!");
+}
+else
+{
+    Console.WriteLine("The second value is smaller!");
+}
