@@ -21,7 +21,7 @@ bool e = (age1 > 18) || (age2 < 65);
 Console.WriteLine("Age is greater than 18 OR age2 is less than 65: " + e);
 */
 
-
+/*
 Console.WriteLine("Enter the age of the new candidate: ");
 int age = int.Parse(Console.ReadLine());
 
@@ -53,3 +53,46 @@ else if(today.Date.Day >= 25 && !endOfMounthPaymentStarted)
     Console.WriteLine("Payments will be late!");
 }
 //else isn´t required!
+
+*/
+
+
+// Creating a while loop / "Creando un bucle while"
+/*Console.WriteLine("Enter a value: ");
+int max = int.Parse(Console.ReadLine());
+int i = 0;
+
+while (i < max)
+{
+    Console.WriteLine(i);
+    i++;
+//
+
+int i = 10;
+
+while (i > 0) 
+{
+    Console.WriteLine(i);
+    i --;
+}
+Console.WriteLine("Loop finished!");
+
+*/
+
+
+
+// Creating a nested loop / "Creacion un bucle anidado"
+int i = 0;
+int j = 0;
+
+while (i < 10)
+{
+    while (j < 10)
+    {
+        Console.WriteLine("i: " + i + " j: " + j);
+        j++;
+    }
+    j = 0;
+    i++;
+}
+

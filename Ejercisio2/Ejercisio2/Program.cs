@@ -154,3 +154,85 @@ else
 {
     Console.WriteLine("The second value is smaller!");
 }
+
+*/
+
+/*
+//Ejemplo de cadena interactiva
+
+using System;
+
+Console.WriteLine("Choose the action you want to do: ");
+Console.WriteLine("1. Add employee");
+Console.WriteLine("2. Update employee");
+Console.WriteLine("3. Delete employee");
+Console.WriteLine("99. Exit application");
+string selectedAction = Console.ReadLine();
+
+while (selectedAction != "99" )
+{
+    switch (selectedAction)
+    {
+        case "1":
+            Console.WriteLine("Adding new employe...");
+            break;
+        case "2": Console.WriteLine("Updating employee...");
+            break;
+        case "3": Console.WriteLine("Deleting employee...");
+            break;
+        case "4": Console.WriteLine("Invalid input");
+            break;
+
+    }
+    Console.WriteLine("Choose the action you want to do: ");
+    Console.WriteLine("1. Add employee");
+    Console.WriteLine("2. Update employee");
+    Console.WriteLine("3. Delete employee");
+    Console.WriteLine("99. Exit application");
+    selectedAction = Console.ReadLine();
+}
+Console.WriteLine("Closing application");
+*/
+
+
+
+/*//Ej 23."While"
+
+int i = 1;
+
+while (i <= 10)
+{
+    Console.WriteLine(i);
+    i++;
+}
+
+Console.WriteLine(i); // muestra el valor de i, que es 11 después de salir del while loop
+*/
+
+
+
+
+/*//Ejercicio 4 Resumen "Loops"                 //en la consola me funciono en la pagina no.
+Console.Write("Ingrese un número entero positivo: ");
+
+int sum = 0;
+
+string stringValue = Console.ReadLine();
+
+int startValue = int.Parse(stringValue);
+
+for (int i = startValue; i > 0; i--)
+{
+    sum += i;
+}
+
+Console.WriteLine("La suma es:" + sum);
+*/
+
+
+/* //Ej 24. "for"
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine(i);
+}
+*/
