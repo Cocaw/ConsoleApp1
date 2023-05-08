@@ -236,3 +236,36 @@ for (int i = 0; i < 10; i++)
     Console.WriteLine(i);
 }
 */
+
+/* //Ej 25. "Methods"
+ public static int SubtractTwoNumbers(int a, int b)
+{
+    return a - b;
+} 
+ */
+
+/* //Ej 26 "Methods invocation"
+ int sum = AddNumbers(5, 2);
+
+ */
+
+
+/* // "EJERCICIO N°5  METHODS"
+ //Program.cs    
+Console.WriteLine("The result is " + Utilities.MultiplyTwoNumbers(3, 6));
+Console.ReadLine();
+
+ // Utilieties.cs
+public class Utilities 
+{
+    public static int MultiplyTwoNumbers(int a, int b)
+    {
+        return a * b;
+    }
+}
+
+ */
+
+/* //Ej. 27 "Utility class"
+ 
+ */
