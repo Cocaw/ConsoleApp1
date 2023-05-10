@@ -8,7 +8,7 @@ Console.WriteLine("Age is 23" + a);
 bool b = age > 23; 
 Console.WriteLine("Age is greater than 23: " + b);
 
-bool c = (age > 18) && (age < 65);
+bool c = (age > 18) && (age <= 65);
 Console.WriteLine("Age is between 18 and 65: " + c);
 
 
@@ -81,7 +81,9 @@ Console.WriteLine("Loop finished!");
 
 
 
-// Creating a nested loop / "Creacion un bucle anidado"
+/*// Creating a nested loop / "Creacion un bucle anidado"
+
+
 int i = 0;
 int j = 0;
 
@@ -95,4 +97,70 @@ while (i < 10)
     j = 0;
     i++;
 }
+//while (true)
+//{
+//    Console.WriteLine(DateTime.Now);
+//}
 
+
+
+//string selectedAction = "";
+
+//do
+//{
+//    Console.WriteLine("Choose the action you want to do: ");
+//    Console.WriteLine("1. Add employee");
+//    Console.WriteLine("2. Update employee");
+//    Console.WriteLine("3. Delete employee");
+//    Console.WriteLine("99. Exit application");
+//    selectedAction = Console.ReadLine();
+
+//    switch (selectedAction)
+//    {
+//        case "1":
+//            Console.WriteLine("Adding new employee...");
+//            break;
+//        case "2":
+//            Console.WriteLine("Updating employee...");
+//            break;
+//        case "3":
+//            Console.WriteLine("Deleting employee...");
+//            break;
+//        default:
+//            Console.WriteLine("Invalid input");
+//            break;
+//    }
+
+//} while (selectedAction != "99");
+
+//Console.WriteLine("Closing application");
+
+//for (int i = 0; i < 10; i++)
+//{
+//    Console.WriteLine(i);
+//}
+
+
+//for (int i = 0, j = 10; i < 10 && j > 0; i++, j--)
+//{
+//    Console.WriteLine("i: " + i + "   j: " + j);
+//}
+
+//Console.WriteLine("Enter a value: ");
+//int max = int.Parse(Console.ReadLine());
+
+
+//for (int i = 0; i < max; i++)
+//{
+//    if (i == 15)
+//    {
+//        Console.WriteLine("Bingo! " + i + " was found!");
+//        continue;
+//        //break;
+//    }
+//    Console.WriteLine(i);
+//}
+
+
+Console.ReadLine();
+*/
