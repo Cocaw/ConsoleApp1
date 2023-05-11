@@ -267,5 +267,125 @@ public class Utilities
  */
 
 /* //Ej. 27 "Utility class"
- 
+ //Utilities.cs
+public class Utilities
+{
+    public static int SubtractTwoNumbers(int a, int b)
+    {
+        return a - b;
+    }
+}
+//Program.cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        int num1 = 10;
+        int num2 = 5;
+        int sum = Utilities.SubtractTwoNumbers(num1, num2);
+
+        Console.WriteLine("The result of subtracting from {1} is {2}.", num2, num1, sum);
+        Console.ReadLine();
+    }
+}
+
  */
+
+/* //Ej. 28 "Method Overloading"
+ public class Utilities
+{
+    public static int AddNumbers(int a, int b)
+    {
+        return a + b;
+    }
+
+    public static int AddNumbers(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+}
+
+ */
+
+
+/*  //Ej. 29 "Optional Parameters"
+ public class Utilities
+{
+    public static int CalculateYearlyWage(int monthlyWage, int months = 12)
+    {
+        return monthlyWage * months;
+    }
+}
+
+ */
+
+/*  //Ej.30 "Named Argument"
+ //Program.cs
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int yearlyWage = Utilities.CalculateYearlyWage(months: 12, monthlyWage: 1000);
+
+        Console.WriteLine($"Yearly wage: {yearlyWage}");
+    }
+}
+
+// Utilities.cs
+
+public class Utilities
+{
+    public static int CalculateYearlyWage(int monthlyWage, int months)
+    {
+        return monthlyWage * months;
+    }
+}
+
+ */
+
+/* //Ej. 31 "Ejercicio 6 resumen  Methods and their parameters"
+ //Program.cs
+
+int yearlyWage = Utilities.CalculateYearlyWage(1000);
+
+Console.WriteLine("The yearly wage is " + yearlyWage);
+
+Console.ReadLine();
+ //Utilities.cs
+public class Utilities
+{
+    public static int CalculateYearlyWage(int monthlyWage, bool giveBonus = true)
+    {
+        if (giveBonus)
+        {
+            return monthlyWage * 12 + 1000;
+        }
+        else
+        {
+            return monthlyWage * 12;
+        }
+    }
+}
+
+ */
+
+/* // 31 "Expression bodied"
+ public static void UsingExpressionBodiedSyntax()
+{
+	int amount = 1234;
+	int months = 12;
+	int bonus = 500;
+
+	int yearlyWageForEmployee1 = CalculateYearlyWageExpressionBodied(monthlyWage, months, bonus);
+	Console.WriteLine($"Yearly wage for employee 1 (Bethany): {yearlyWageForEmployee1}");
+}
+
+
+public static int CalculateYearlyWageExpressionBodied(int monthlyWage, int numberOfMonthsWorked, int bonus) => monthlyWage * numberOfMonthsWorked + bonus;
+
+ */
+//Cierre de Modulo5
