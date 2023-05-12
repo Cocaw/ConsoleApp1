@@ -240,6 +240,7 @@ for (int i = 0; i < 10; i++)
 /* //Ej 25. "Methods"
  public static int SubtractTwoNumbers(int a, int b)
 {
+  int result =  a - b;
     return a - b;
 } 
  */
