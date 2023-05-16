@@ -24,5 +24,12 @@ Utilities.UsingOptionalParameters();
 
 Utilities.UsingNamedArguments();
 
+Utilities.ManipulatingStrings();
+
+Utilities.UsingEscapeCharacters();
+
+Utilities.UsingStringEquality();
+
+Utilities.ParsingStrings();
 Console.ReadLine();
 

@@ -390,3 +390,137 @@ public static int CalculateYearlyWageExpressionBodied(int monthlyWage, int numbe
 
  */
 //Cierre de Modulo5
+
+
+
+
+
+
+
+//Modulo 6
+
+
+/*    //Ej. 31 "string lowercase"
+string b = "Welcome to thIs AweSomE CouRse!";
+string a = b.ToLower();
+*/
+
+/*    //Ej. 32 "String Contains"
+public class Utilities
+{
+    public bool CheckContains(string input)
+    {
+        if (input.Contains("Goodbye"))
+        {
+            return true;
+        }
+        
+        bool containsGoodbye = false;
+        
+        return containsGoodbye;
+    }
+}
+ 
+ */
+
+
+/*  //Ej. 33 "String Plus"
+ public class Utilities
+{
+    public static string ConcatUsingPlus(string a, string b)
+    {
+        string c = a + " " + b;
+        return c;
+    }
+}
+*/
+
+
+/*   //Ej. 34 "String Interpolation"
+ public class Utilities
+{
+    public static string CreateGreeting(string employeeName, int age)
+    {
+        string greeting = $"Hello {employeeName}, you are {age} years";
+        return greeting;
+    }
+}
+
+ */
+
+/*   //EJERCICIO N°7  "Remove vowels"
+ //Utilities
+public class Utilities
+{
+    public static string RemoveVowels(string input)
+    {
+        string vowels = "aeiouy";
+        string result = "";
+
+        foreach (char c in input)
+        {
+            if (!vowels.Contains(char.ToLower(c)))
+            {
+                result += c;
+            }
+        }
+
+        return result;
+    }
+}
+// Program.cs
+
+var sampleString = "baceiouxyz";
+
+Console.WriteLine(sampleString + " => " + Utilities.RemoveVowels(sampleString));
+
+ */
+
+
+/*   //Ej. 35 "Escape Characteres"
+public class Utilities
+{
+    public static string AddBreak()
+    {
+        string result = "Hello\nEveryone";
+        return result;
+    }
+}
+
+ */
+
+/*   //EJERCICIO N° 8 "String Equality"
+ public class Utilities
+{
+    public static bool CheckIfStringsAreEqual(string a, string b)
+    {
+        bool areEqual = string.Equals(a, b, StringComparison.OrdinalIgnoreCase);
+        return areEqual;
+    }
+}
+
+ */
+
+
+/*   //Ej. 36 "String Parsing"
+ *   
+        Console.WriteLine("Enter the number of employees: ");
+        string input = Console.ReadLine();
+
+        int i;
+        bool success = int.TryParse(input, out i);
+
+        if (success)
+        {
+            Console.WriteLine("Parsed integer value: " + i);
+        }
+        else
+        {
+            Console.WriteLine("Invalid input. Please enter a valid integer.");
+        }
+
+ */
+
+            // CIerre de ejercicios de Modulo 6
+
+
