@@ -521,6 +521,215 @@ public class Utilities
 
  */
 
-            // CIerre de ejercicios de Modulo 6
+// CIerre de ejercicios de Modulo 6
 
 
+
+
+
+/*   //Ej. 37 "Class creation "
+ using System;
+
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked}");
+    }
+}
+ */
+
+
+
+
+
+/*   //Ej.38 "Class methodo"
+ using System;
+
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked}");
+    }
+
+    public void Work(int hours, bool resetHours)
+    {
+        if (resetHours)
+        {
+            numberOfHoursWorked = 0;
+        }
+
+        numberOfHoursWorked += hours;
+    } 
+ */
+
+/*   //Ej.39 "Object creation"
+ 
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked};");
+    }
+
+    public void Work(int hours, bool resetHours)
+    {
+        if (resetHours)
+            numberOfHoursWorked = 0;
+
+        numberOfHoursWorked += hours;
+    }
+}
+
+ */
+
+
+/*   //Ej.40 "Constructor"
+ using System;
+
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public Employee(string employeeName, int employeeAge, int hours)
+    {
+        name = employeeName;
+
+        age = employeeAge;
+
+        numberOfHoursWorked = hours;
+    }
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked};");
+    }
+
+    public void Work(int hours, bool resetHours)
+    {
+        if (resetHours)
+            numberOfHoursWorked = 0;
+
+        numberOfHoursWorked += hours;
+    }
+}
+ */
+
+
+/*   //Ej. 41 "Using object"
+ //Employee.cs
+﻿
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public Employee(string employeeName, int employeeAge, int hours)
+    {
+        name = employeeName;
+        age = employeeAge;
+        numberOfHoursWorked = hours;
+    }
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked};");
+    }
+
+    public void Work(int hours, bool resetHours)
+    {
+        if (resetHours)
+            numberOfHoursWorked = 0;
+
+        numberOfHoursWorked += hours;
+    }
+}
+
+//Porgram.cs
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Employee employee = new Employee("Gill", 42, 10);
+
+        employee.Work(10, false);
+        employee.Work(8, false);
+        employee.Work(5, false);
+
+        employee.DisplayEmployeeDetails();
+
+        employee.name = "John";
+    }
+}
+
+ */
+
+/*   // Ejercicio N°9 "Create class and object"
+ //Vehicle.cs
+public class Vehicle
+{
+    public string model;
+    public string color;
+    public int currentMileage;
+
+    public Vehicle()
+    {
+        // Default constructor
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        this.currentMileage = currentMileage;
+        this.model = model;
+        this.color = color;
+    }
+
+    public void Drive()
+    {
+        currentMileage += 1;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            currentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {model} - Color: {color} - Current mileage: {currentMileage}";
+    }
+}
+
+//Utilities.cs
+public class Utilities
+{
+    public static Vehicle CreateAndUseVehicle()
+    {
+        Vehicle vehicle = new Vehicle(100, "BMW", "Black");
+        vehicle.Drive(10);
+        vehicle.color = "Red";
+        return vehicle;
+    }
+}
+ */
+
+        //Cierre de Modulo 7 
