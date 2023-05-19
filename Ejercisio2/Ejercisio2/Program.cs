@@ -732,4 +732,311 @@ public class Utilities
 }
  */
 
-        //Cierre de Modulo 7 
+//Cierre de Modulo 7 
+
+
+
+
+//Modulo 8
+/*   //Ej.42  "Pass by ref"
+ //Employee.cs
+using System;
+
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public Employee(string employeeName, int employeeAge, int hours)
+    {
+        name = employeeName;
+        age = employeeAge;
+        numberOfHoursWorked = hours;
+    }
+
+    public int CalculateBonusAndTax(int bonus, ref int tax)
+    {
+        if (numberOfHoursWorked > 10)
+            bonus *= 2;
+
+        if (bonus >= 200)
+        {
+            tax = bonus / 10;
+        }
+
+        Console.WriteLine($"The employee got a bonus of {bonus} and the tax is {tax}");
+        return bonus;
+    }
+}
+
+
+//Program.cs
+public class Program
+{
+    public static void Main()
+    {
+        int defaultBonus = 1000;
+        int tax = 0;
+
+        Employee employee = new Employee("Gill", 42, 10);
+
+        int bonus = employee.CalculateBonusAndTax(defaultBonus, ref tax);
+    }
+}
+
+ */
+
+
+/*   //Ej.43  "Using out"
+//Employee.cs
+using System;
+
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public Employee(string employeeName, int employeeAge, int hours)
+    {
+        name = employeeName;
+        age = employeeAge;
+        numberOfHoursWorked = hours;
+    }
+
+    public int CalculateBonusAndTax(int bonus, out int tax)
+    {
+        tax = 0;
+
+        if (numberOfHoursWorked > 10)
+            bonus *= 2;
+
+        if (bonus >= 200)
+        {
+            tax = bonus / 10;
+        }
+
+        Console.WriteLine($"The employee got a bonus of {bonus} and the tax is {tax}");
+        return bonus;
+    }
+}
+
+//Program.cs
+public class Program
+{
+    public static void Main()
+    {
+        int defaultBonus = 1000;
+        int tax;
+
+        Employee employee = new Employee("Gill", 42, 10);
+
+        int bonus = employee.CalculateBonusAndTax(defaultBonus, out tax);
+
+        Console.WriteLine($"The calculated tax value is: {tax}");
+
+        Console.ReadLine();
+    }
+}
+
+ */
+
+/*   //Ej.44 "StringBuldier"
+ using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.Append("Welcome ");
+        stringBuilder.Append("to ");
+        stringBuilder.AppendLine("Bethany's Pie Shop!");
+        stringBuilder.Append("Please log in!");
+
+        Console.WriteLine(stringBuilder.ToString());
+    }
+}
+ */
+
+/*   //Ej.45 " Enum1"
+ public enum Colors
+{
+    Red,
+    Green,
+    Blue
+}
+
+ */
+
+/*   //Ej.46 "Enum2"
+  public enum  Colors
+{
+  Red=5,
+  Green=8,
+  Blue=10;
+}
+
+ */
+
+/*                    //Ejercicio N10"Enumerations"
+//VehicleType.cs
+public enum VehicleType
+{
+  Car,
+  Van,
+  Truck;
+}
+//Vehicles.cs
+public class Vehicle
+{
+    public int currentMileage;
+    public string model;
+    public string color;
+
+    public Vehicle()
+    {
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        this.currentMileage = currentMileage;
+        this.model = model;
+        this.color = color;
+    }
+
+    public void Drive()
+    {
+        currentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            currentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {model} - Color: {color} - Current mileage: {currentMileage}";
+    }
+}
+//Utilities.cs
+
+public class Utilities
+{
+    public static Vehicle CreateAndUseVehicle()
+    {
+        Vehicle vehicle = new Vehicle(100, "BMW", "Black");
+
+        vehicle.Drive(10);
+
+        vehicle.color = "Red";
+
+        return vehicle;
+    }
+}
+ */
+
+/*   //Ej.47"Struct"
+//Program.cs
+class Program
+{
+    static void Main()
+    {
+        ToDo newToDo;
+        newToDo.description = "Buy milk";
+        newToDo.done = false;
+
+        // Resto del código...
+    }
+}
+ //ToDo.cs
+public struct ToDo
+{
+    public string description;
+    public bool done;
+}
+
+ */
+
+/*         EJERCICIO N° 11"struc"
+ //Produc.cs
+public struct Product
+{
+    public double basePrice;
+    public string name;
+
+    public double CalculateSalePrice()
+    {
+        return basePrice * 1.17;
+    }
+}
+//Utilities.cs
+public class Utilities
+{
+    public static double GetSalePrice()
+    {
+        Product product = new Product();
+        product.name = "Milk";
+        product.basePrice = 1.25;
+        
+        return product.CalculateSalePrice();
+    }
+}
+ 
+ */
+
+/*    EJERCICIO N° 12 "nameespace"
+ //Truck.cs
+namespace Shop.Large
+{
+    public class Truck
+    {
+        // Clase Truck
+    }
+}
+//Van.cs
+namespace Shop.Medium
+{
+    public class Van
+    {
+        // Clase Van
+    }
+}
+//Suv.cs
+namespace Shop.Medium
+{
+    public class Suv
+    {
+        // Clase Suv
+    }
+}
+//CityCar.cs
+namespace Shop.Small
+{
+    public class CityCar
+    {
+        // Clase CityCar
+    }
+}
+//Program
+ using Shop.Large;
+using Shop.Medium;
+using Shop.Small;
+
+class Program
+{
+    static void Main()
+    {
+        Truck truck = new Truck();
+        Van van = new Van();
+        Suv suv = new Suv();
+        CityCar cityCar = new CityCar();
+
+        // Resto del código...
+    }
+}
+ */                             //Cierre de Modulo 8
