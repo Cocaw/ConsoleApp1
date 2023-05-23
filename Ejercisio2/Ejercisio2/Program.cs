@@ -1040,3 +1040,194 @@ class Program
     }
 }
  */                             //Cierre de Modulo 8
+
+
+
+// Modulo 9
+/*      //Ej.48 "Namespace"
+ //Employee.cs
+using System;
+
+namespace Pluralsight.EmployeeApp
+{
+    public class Employee
+    {
+        public string name;
+        public int age;
+        public int numberOfHoursWorked = 0;
+
+        public Employee(string employeeName, int employeeAge, int hours)
+        {
+            name = employeeName;
+            age = employeeAge;
+            numberOfHoursWorked = hours;
+        }
+
+        public void DisplayEmployeeDetails()
+        {
+            Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked}");
+        }
+
+        public void Work(int hours, bool resetHours)
+        {
+            if (resetHours)
+                numberOfHoursWorked = 0;
+
+            numberOfHoursWorked += hours;
+        }
+    }
+}
+//Pogram.cs
+using System;
+using Pluralsight.EmployeeApp;
+
+namespace Pluralsight.EmployeeApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Employee employee = new Employee("John Doe", 25, 40);
+
+            employee.DisplayEmployeeDetails();
+
+            employee.Work(10, false);
+
+            employee.DisplayEmployeeDetails();
+
+            Console.ReadKey();
+        }
+    }
+}
+
+ */
+
+/*        //Ej.49 "Static"
+ //Employee.cs
+using System;
+
+public class Employee
+{
+    public string Name { get; set; }
+    public double Salary { get; set; }
+
+    public static double bonusPercentage = 0.15;
+
+    public static void UpdateBonusPercentage(double newPercentage)
+    {
+        bonusPercentage = newPercentage;
+    }
+}
+//Porgram.cs
+class Program
+{
+    static void Main()
+    {
+        Employee.UpdateBonusPercentage(0.17);
+
+        Console.WriteLine(Employee.bonusPercentage);
+    }
+}
+ */
+
+/*                  //Ejercicio N°13 "Static"
+//Vehicle.cs
+public class Vehicle
+{
+    public static int maxSpeed = 100;
+
+    public static void IncreaseMaxSpeed(int amount)
+    {
+        maxSpeed += amount;
+    }
+}
+//Utilities.cs
+public class Utilities
+{
+    public static int ChangeMaxSpeed()
+    {
+        int newMaxSpeed = 0;
+        int increaseAmount = 10;
+
+        Vehicle.IncreaseMaxSpeed(increaseAmount);
+        newMaxSpeed = Vehicle.maxSpeed;
+
+        return newMaxSpeed;
+    }
+}
+ */
+
+/*        Ej.50 "null"
+//Employee.cs
+public class Employee
+{
+    public string name;
+    public int age;
+    public int numberOfHoursWorked = 0;
+
+    public Employee(string employeeName, int employeeAge, int hours)
+    {
+        name = employeeName;
+        age = employeeAge;
+        numberOfHoursWorked = hours;
+    }
+
+    public void DisplayEmployeeDetails()
+    {
+        Console.WriteLine($"Employee name: {name} - Age: {age} - Number of hours worked: {numberOfHoursWorked};");
+    }
+
+    public void Work(int hours, bool resetHours)
+    {
+        if (resetHours)
+            numberOfHoursWorked = 0;
+
+        numberOfHoursWorked += hours;
+    }
+}
+
+//Program.cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        Employee employee = new Employee("Gill", 42, 10);
+        employee = null;
+    }
+}
+ */
+
+
+
+// Cierre modulo 9
+
+/*       Ej.52 "Sample array"
+ int[] myValues = new int[5];
+ */
+
+
+/*       Ej.53 "Array initialization"
+ int[] intValues = new int[] { 5, 15, 25, 35, 45 };
+
+ */
+
+/*       Ej. 54 "Accesing elements in is array"
+
+
+string [] greetings = new string[] { "Hello", "Goodbye", "Farewell", "Welcome"};
+string selectedGreeting = greetings[2];
+
+ */
+
+/*        Ej.54 "Array looping"
+ int[] myValues = new int[] { 5, 15, 25, 35, 45 };
+
+for (int i = 0; i < myValues.Length; i++)
+{
+    Console.WriteLine(myValues[i]);
+} 
+ */
+
+/*        Ej
+ 
+ */
