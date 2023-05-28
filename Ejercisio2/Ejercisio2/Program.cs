@@ -1219,7 +1219,7 @@ string selectedGreeting = greetings[2];
 
  */
 
-/*        Ej.54 "Array looping"
+/*        Ej.55 "Array looping"
  int[] myValues = new int[] { 5, 15, 25, 35, 45 };
 
 for (int i = 0; i < myValues.Length; i++)
@@ -1228,6 +1228,289 @@ for (int i = 0; i < myValues.Length; i++)
 } 
  */
 
-/*        Ej
+/*        Ej.56 "object array"
+//Program.cs
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Vehicle v1 = new Vehicle(10, "BMW", "Red");
+        Vehicle v2 = new Vehicle(45, "Toyota", "Blue");
+        Vehicle v3 = new Vehicle(987, "Renault", "Black");
+        Vehicle v4 = new Vehicle(45643, "Volkswagen", "Green");
+        Vehicle v5 = new Vehicle(0, "Fiat", "Red");
+
+        Vehicle[] vehicles = new Vehicle[5];
+        vehicles[0] = v1;
+        vehicles[1] = v2;
+        vehicles[2] = v3;
+        vehicles[3] = v4;
+        vehicles[4] = v5;
+
+    }
+}
+
+//Vehicle.cs
+public class Vehicle
+{
+    public int currentMileage;
+    public string model;
+    public string color;
+
+    public Vehicle()
+    {
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        this.currentMileage = currentMileage;
+        this.model = model;
+        this.color = color;
+    }
+
+    public void Drive()
+    {
+        currentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            currentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {model} - Color: {color} - Current mileage: {currentMileage}";
+    }
+}
+
  
  */
+
+/*        //Ej.57 "Array sort"
+//Program.cs
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[] unsortedValues = new int[] { 44, 46, 1, 6664, 123, 999 };
+
+        Array.Sort(unsortedValues);
+
+        Console.WriteLine("Sorted Values:");
+        foreach (int value in unsortedValues)
+        {
+            Console.WriteLine(value);
+        }
+    }
+}
+
+ 
+ */
+
+/*            //Ej.58 "Array lenght"
+
+int[] myValues = new int[] { 5, 15, 25, 35, 45 };
+
+int length = myValues.Length;
+
+ 
+ */
+
+/*        //EJERCICIO N°15 "Array"
+public class Utilities
+{
+    public static int CalculateSumOfArrayElements(int[] array)
+    {
+        int sum = 0;
+        
+        foreach (int element in array)
+        {
+            sum += element;
+        }
+        
+        return sum;
+    }
+}
+
+ */
+
+/*        //Ej.59 "List creation"
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<int> myValues = new List<int>();
+
+        myValues.Add(5);
+        myValues.Add(15);
+        myValues.Add(25);
+        myValues.Add(35);
+        myValues.Add(45);
+
+    }
+}
+ */
+
+/*        //Ej.60 "List Contains"
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<int> myValues = new List<int> { 5, 15, 25, 35, 45, 55, 65 };
+
+        bool containsValue = myValues.Contains(75);
+
+        Console.WriteLine("Contains value 75: " + containsValue);
+    }
+}
+ */
+
+/*        //Ej.61 "List length"
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<int> myValues = new List<int> { 5, 15, 25, 35, 45, 55, 65 };
+
+        int length = myValues.Count;
+
+        Console.WriteLine("Length of myValues: " + length);
+    }
+} 
+ */
+
+
+/*         //Ej.62 "List insert"
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        List<int> myValues = new List<int> { 5, 15, 35, 45, 55, 65 };
+
+        myValues.Insert(2, 25);
+
+        Console.WriteLine("Updated myValues:");
+        foreach (int value in myValues)
+        {
+            Console.WriteLine(value);
+        }
+    }
+}
+ */
+
+/*        //Ej.63 "List of objects"
+ //Program.cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        Vehicle v1 = new Vehicle(10, "BMW", "Red");
+        Vehicle v2 = new Vehicle(45, "Toyota", "Blue");
+        Vehicle v3 = new Vehicle(987, "Renault", "Black");
+        Vehicle v4 = new Vehicle(45643, "Volkswagen", "Green");
+        Vehicle v5 = new Vehicle(0, "Fiat", "Red");
+
+        List<Vehicle> vehicles = new List<Vehicle>();
+
+        vehicles.Add(v1);
+        vehicles.Add(v2);
+        vehicles.Add(v3);
+        vehicles.Add(v4);
+        vehicles.Add(v5);
+
+    }
+}
+ //Vehicle
+public class Vehicle
+{
+    public int currentMileage;
+    public string model;
+    public string color;
+
+    public Vehicle()
+    {
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        this.currentMileage = currentMileage;
+        this.model = model;
+        this.color = color;
+    }
+
+    public void Drive()
+    {
+        currentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            currentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {model} - Color: {color} - Current mileage: {currentMileage}";
+    }
+}
+ */
+
+/*        //EJERCICIO N°15 "LISTS"
+ //Utilities.cs
+public static class Utilities
+{
+    public static int CalculateSumOfMilesDriven(List<Vehicle> vehicles)
+    {
+        int sum = 0;
+
+        for (int i = 0; i < vehicles.Count; i++)
+        {
+            sum += vehicles[i].currentMileage;
+        }
+        return sum;
+    }
+
+}
+//Program.cs
+class Program
+{
+    static void Main(string[] args)
+    {
+        Vehicle v1 = new Vehicle(10, "BMW", "Red");
+        Vehicle v2 = new Vehicle(45, "Toyota", "Blue");
+        Vehicle v3 = new Vehicle(987, "Renault", "Black");
+        Vehicle v4 = new Vehicle(45643, "Volkswagen", "Green");
+        Vehicle v5 = new Vehicle(0, "Fiat", "Red");
+
+        List<Vehicle> vehicles = new List<Vehicle>();
+        vehicles.Add(v1);
+        vehicles.Add(v2);
+        vehicles.Add(v3);
+        vehicles.Add(v4);
+        vehicles.Add(v5);
+
+        int sum = Utilities.CalculateSumOfMilesDriven(vehicles);
+
+        Console.WriteLine("Sum of miles driven is " + sum);
+    }
+}
+ 
+ */
+
+                    //Cierre de Modulo 10
