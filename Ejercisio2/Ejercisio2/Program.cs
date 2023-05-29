@@ -1513,4 +1513,645 @@ class Program
  
  */
 
-                    //Cierre de Modulo 10
+//Cierre de Modulo 10
+
+
+/*        //Ej.64 "Properties"
+public class Vehicle
+{
+    private int currentMileage;
+
+    public int CurrentMileage
+    {
+        get { return currentMileage; }
+        set { currentMileage = value; }
+    }
+}
+ */
+
+/*        //Ej.65 "Using properties"
+class Program
+{
+    static void Main(string[] args)
+    {
+        Vehicle vehicle = new Vehicle();
+
+        vehicle.CurrentMileage = 100;
+    }
+} 
+ */
+
+/*        //Ej.66 "Inheritance"
+//Car.cs
+public class Car : Vehicle
+{
+    public Car(int currentMileage, string model, string color, int numberOfGears) : base(currentMileage, model, color)
+    {
+        NumberOfGears = numberOfGears;
+    }
+
+    private int numberOfGears;
+
+    public int NumberOfGears
+    {
+        get
+        {
+            return numberOfGears;
+        }
+        set
+        {
+            numberOfGears = value;
+        }
+    }
+}
+ //Vehicle
+﻿public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get 
+        { 
+            return color; 
+        }
+        set 
+        { 
+            color = value; 
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+}
+ */
+
+/*        //Ej.67 "Access modifiers"
+//Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get { return currentMileage; }
+        set { currentMileage = value; }
+    }
+
+    public string Color
+    {
+        get { return color; }
+        set { color = value; }
+    }
+
+    public string Model
+    {
+        get { return model; }
+        set { model = value; }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    public string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+}
+ */
+
+/*        //Ej.68 "Private and protected"
+ //Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+
+/*        //Ej.69 "Is A"
+//Car.cs
+
+public class Car : Vehicle
+{
+    public Car(int currentMileage, string model, string color, int numberOfGears) : base(currentMileage, model, color)
+    {
+        NumberOfGears = numberOfGears;
+    }
+
+    private int numberOfGears;
+
+    public int NumberOfGears
+    {
+        get
+        {
+            return numberOfGears;
+        }
+        set
+        {
+            numberOfGears = value;
+        }
+    }
+
+    public void SoundCarHorn()
+    {
+        SoundHorn();
+    }
+}
+//Program.cs
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Car car1 = new Car(10, "BMW", "Black", 8);
+        car1.Drive(10);
+
+        Console.WriteLine(car1.DisplayVehicleDetails());
+        car1.SoundCarHorn();
+
+        Console.ReadLine();
+    }
+}
+//Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+/*        //Ej.70 "Composition"
+//Owner.cs
+public class Owner
+{
+    private string firstName;
+    private string lastName;
+
+    public string FirstName
+    {
+        get { return firstName; }
+        set { firstName = value; }
+    }
+
+    public string LastName
+    {
+        get { return lastName; }
+        set { lastName = value; }
+    }
+
+    public Owner(string firstName, string lastName)
+    {
+        FirstName = firstName;
+        LastName = lastName;
+    }
+}
+//Program.cs
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Owner owner = new Owner("Gill", "Cleeren");
+        Vehicle v1 = new Vehicle(10, "BMW", "Black");
+        v1.Owner = owner;
+
+        Console.WriteLine($"Owner: {v1.Owner.FirstName} {v1.Owner.LastName}");
+        Console.WriteLine(v1.DisplayVehicleDetails());
+
+        Console.ReadLine();
+    }
+}
+//Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+    private Owner owner;
+
+    public Owner Owner
+    {
+        get { return owner; }
+        set { owner = value; }
+    }
+
+    public int CurrentMileage
+    {
+        get { return currentMileage; }
+        set { currentMileage = value; }
+    }
+
+    public string Color
+    {
+        get { return color; }
+        set { color = value; }
+    }
+
+    public string Model
+    {
+        get { return model; }
+        set { model = value; }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+/*        //Ej.71 "Polymophism"
+//Car.cs
+
+public class Car : Vehicle
+{
+    public Car(int currentMileage, string model, string color, int numberOfGears) : base(currentMileage, model, color)
+    {
+        NumberOfGears = numberOfGears;
+    }
+
+    private int numberOfGears;
+
+    public int NumberOfGears
+    {
+        get
+        {
+            return numberOfGears;
+        }
+        set
+        {
+            numberOfGears = value;
+        }
+    }
+
+    public void SoundCarHorn()
+    {
+        SoundHorn();
+    }
+}
+//Program.cs
+
+//SportsCar.cs
+
+//Vehicle.cs
+ 
+ */
+
+
+/*        //EJERCICIO N°16 "OO"
+//Daisy.cs
+public class Daisy : Flower
+{
+    public Daisy(string name, int petals, int leaves) : base(name, petals, leaves)
+    {
+    }
+}
+//SunFlower.cs
+public class SunFlower : Flower
+{
+    public SunFlower(string name, int petals, int leaves) : base(name, petals, leaves)
+    {
+    }
+
+    public override void Grow()
+    {
+        Height += 2;
+    }
+}
+//Flower.cs
+
+public class Flower
+{
+    private int petals;
+    private int leaves;
+    private string name;
+    private int height = 0;
+
+    public Flower(string name, int petals, int leaves)
+    {
+        Petals = petals;
+        Leaves = leaves;
+        Name = name;
+    }
+
+    public int Petals
+    {
+        get { return petals; }
+        set
+        {
+            petals = value;
+        }
+    }
+
+    public int Leaves
+    {
+        get
+        {
+            return leaves;
+        }
+
+        set
+        {
+            leaves = value;
+        }
+    }
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            name = value;
+        }
+    }
+
+    public int Height
+    {
+        get { return height; }
+        set
+        {
+            height = value;
+        }
+    }
+
+    public virtual void Grow()
+    {
+        Height++;
+    }
+
+    public string DisplayDetails()
+    {
+        return $"Flower name: {Name} - Petals: {Petals} - Leaves: {Leaves} - Height: {Height}";
+    }
+}
+ */
+
+
+
+/*        //Ej.72 "Interface"
+//Vehicle.cs
+public interface IVehicle
+{
+    void Drive();
+    void Drive(int miles);
+}
+
+public class Vehicle : IVehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get { return currentMileage; }
+        set { currentMileage = value; }
+    }
+
+    public string Color
+    {
+        get { return color; }
+        set { color = value; }
+    }
+
+    public string Model
+    {
+        get { return model; }
+        set { model = value; }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+}
+ */
