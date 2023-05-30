@@ -950,7 +950,6 @@ class Program
         newToDo.description = "Buy milk";
         newToDo.done = false;
 
-        // Resto del código...
     }
 }
  //ToDo.cs
@@ -1036,7 +1035,6 @@ class Program
         Suv suv = new Suv();
         CityCar cityCar = new CityCar();
 
-        // Resto del código...
     }
 }
  */                             //Cierre de Modulo 8
