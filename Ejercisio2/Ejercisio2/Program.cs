@@ -2155,3 +2155,200 @@ public class Vehicle : IVehicle
     }
 }
  */
+
+//Cierre de modulo 11
+
+
+/*        //Ej.73 "Fact attribute"
+using Xunit;
+
+public class VehicleTests
+{
+    [Fact]
+    public void Drive_Adds_Miles()
+    {
+        Vehicle vehicle = new Vehicle(10, "BMW", "Black");
+
+        vehicle.Drive();
+
+        Assert.Equal(11, vehicle.CurrentMileage);
+    }
+}
+ */
+
+/*        //Ej.74 "Asserts"
+//Program.cs
+using Xunit;
+
+public class VehicleTests
+{
+    [Fact]
+    public void Drive_Adds_Miles()
+    {
+        Vehicle vehicle = new Vehicle(0, "BMW", "Black");  // Arrange
+
+        vehicle.Drive();  // Act
+
+        Assert.Equal(1, vehicle.CurrentMileage);  // Assert
+    }
+}
+//Vehicle.cs
+﻿public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public virtual void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public virtual void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+/*        //EJERCICIO 17 "Unit test"
+//Flower.cs
+public class Flower
+{
+    private int petals;
+    private int leafs;
+    private string name;
+    private int height = 0;
+
+    public Flower(string name, int petals, int leafs)
+    {
+        Petals = petals;
+        Leafs = leafs;
+        Name = name;
+    }
+
+    public int Petals
+    {
+        get { return petals; }
+        set
+        {
+            petals = value;
+        }
+    }
+
+    public int Leafs
+    {
+        get
+        {
+            return leafs;
+        }
+
+        set
+        {
+            leafs = value;
+        }
+    }
+
+    public string Name
+    {
+        get { return name; }
+        set
+        {
+            name = value;
+        }
+    }
+
+    public int Height
+    {
+        get { return height; }
+        set
+        {
+            height = value;
+        }
+    }
+
+    public virtual void Grow()
+    {
+        Height++;
+    }
+
+    public string DisplayDetails()
+    {
+        return $"Flower name: {Name} - Petals: {Petals} - Leafs: {Leafs} - Height: {Height}";
+    }
+}
+//FlowerTests.cs
+using Xunit;
+
+public class FlowerTests
+{
+    [Fact]
+    public void Grow_Adds_DefaultNumber()
+    {
+        Flower flower = new Flower("Rose", 5, 3);
+        flower.Height = 0;
+
+        flower.Grow();
+
+        Assert.Equal(1, flower.Height);
+    }
+}
+ */
+
+
+            //Cierre de modulo 12
+
