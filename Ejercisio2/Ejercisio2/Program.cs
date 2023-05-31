@@ -2348,5 +2348,636 @@ public class FlowerTests
  */
 
 
-            //Cierre de modulo 12
+//Cierre de modulo 12
 
+
+/*      //Ej.75 "File exist"
+class Program
+{
+    static void Main()
+    {
+        string path = @"D:\data\vehiclelist.txt";
+        bool fileExists = File.Exists(path);
+
+        Console.WriteLine("File exists: " + fileExists);
+    }
+}
+ */
+
+
+/*                //Ej. 76 "Directory exist"
+string path = @"D:\data\";
+bool directoryExists = Directory.Exists(path);
+
+if (!directoryExists)
+{
+    Directory.CreateDirectory(path);
+} 
+ */
+
+
+
+
+
+/*            //Ej.77 "File read"
+
+class Program
+{
+    static void Main()
+    {
+        string fileName = "vehicles.txt";
+        string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+        string[] vehicles = File.ReadAllLines(path);
+
+
+        foreach (string vehicle in vehicles)
+        {
+            Console.WriteLine(vehicle);
+        }
+    }
+}
+ 
+ */
+
+
+/*                //Ej.78 "File write"
+class Program
+{
+    static void Main()
+    {
+        string fileName = "vehicles.txt";
+        string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+        string vehicles = "BMW\nToyota\nMercedes";
+
+        File.WriteAllText(path, vehicles);
+
+        Console.WriteLine("File written successfully.");
+    }
+}
+ */
+
+
+
+/*             //EJERCICIO N° 18 "File parsing"
+ //Utilities.cs
+public class Utilities
+{
+
+    public static List<Vehicle> ReadVehicles(string fileName)
+    {
+        List<Vehicle> vehicleList = new List<Vehicle>();
+
+        string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+        if (File.Exists(path))
+        {
+            string[] vehicles = File.ReadAllLines(path);
+            for (int i = 0; i < vehicles.Length; i++)
+            {
+                string[] vehicleSplits = vehicles[i].Split(';');
+                string model = vehicleSplits[0];
+                string color = vehicleSplits[1];
+                int currentMileage = int.Parse(vehicleSplits[2]);
+
+                Vehicle v = new Vehicle(currentMileage, model, color);
+                vehicleList.Add(v);
+            }
+        }
+        return vehicleList;
+    }
+}
+//Vehicle.cs
+ublic class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+} 
+ */
+
+
+/*          //EJERCICIo N° 19 "File writing"
+//Utilities.cs
+public class Utilities
+{
+
+    public static void WriteVehicles(List<Vehicle> vehicles)
+    {
+        string path = Path.Combine(Environment.CurrentDirectory, "vehicles.txt");
+        StringBuilder sb = new StringBuilder();
+
+        foreach (var vehicle in vehicles)
+        {
+            sb.Append(vehicle.Model + ";");
+            sb.Append(vehicle.Color + ";");
+            sb.Append(vehicle.CurrentMileage);
+            sb.Append(Environment.NewLine);
+        }
+
+        File.WriteAllText(path, sb.ToString());
+    }
+}
+//Vehicle.cs
+ public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+
+//Cierre de modulo 13 
+
+
+
+/*               //Ej.79 "Try cash"
+
+public class Utilities
+{
+
+    public static List<Vehicle> ReadVehicles(string fileName)
+    {
+        try
+        {
+            List<Vehicle> vehicleList = new List<Vehicle>();
+
+            string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+            if (File.Exists(path))
+            {
+                string[] vehicles = File.ReadAllLines(path);
+                for (int i = 0; i < vehicles.Length; i++)
+                {
+                    string[] vehicleSplits = vehicles[i].Split(';');
+                    string model = vehicleSplits[0];
+                    string color = vehicleSplits[1];
+                    int currentMileage = int.Parse(vehicleSplits[2]);
+
+                    Vehicle v = new Vehicle(currentMileage, model, color);
+                    vehicleList.Add(v);
+                }
+            }
+            return vehicleList;
+        }
+        catch (Exception ex)
+        {
+
+            return null;
+        }
+    }
+}
+ */
+
+
+/*          //Ej.80 "Stacktrase"
+//Utilities.cs
+public class Utilities
+{
+    public static List<Vehicle> ReadVehicles(string fileName)
+    {
+        try
+        {
+            List<Vehicle> vehicleList = new List<Vehicle>();
+
+            string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+            if (File.Exists(path))
+            {
+                string[] vehicles = File.ReadAllLines(path);
+                for (int i = 0; i < vehicles.Length; i++)
+                {
+                    string[] vehicleSplits = vehicles[i].Split(';');
+                    string model = vehicleSplits[0];
+                    string color = vehicleSplits[1];
+                    int currentMileage = int.Parse(vehicleSplits[2]);
+
+                    Vehicle v = new Vehicle(currentMileage, model, color);
+                    vehicleList.Add(v);
+                }
+            }
+
+            return vehicleList;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message + " " + ex.StackTrace);
+            return null;
+        }
+    }
+}
+ //Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+
+
+/*            //Ej.81 "Exception types"
+//Utilities.cs
+public class Utilities
+{
+    public static List<Vehicle> ReadVehicles(string fileName)
+    {
+        try
+        {
+            List<Vehicle> vehicleList = new List<Vehicle>();
+
+            string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+            if (File.Exists(path))
+            {
+                string[] vehicles = File.ReadAllLines(path);
+                for (int i = 0; i < vehicles.Length; i++)
+                {
+                    string[] vehicleSplits = vehicles[i].Split(';');
+                    string model = vehicleSplits[0];
+                    string color = vehicleSplits[1];
+                    int currentMileage = int.Parse(vehicleSplits[2]);
+
+                    Vehicle v = new Vehicle(currentMileage, model, color);
+                    vehicleList.Add(v);
+                }
+            }
+
+            return vehicleList;
+        }
+        catch (IndexOutOfRangeException ex)
+        {
+            Console.WriteLine(ex.Message);
+            return null;
+        }
+        catch (FileNotFoundException ex)
+        {
+            Console.WriteLine(ex.Message);
+            return null;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            return null;
+        }
+    }
+}
+//Vehicle.cs
+public class Vehicle
+{
+    private int currentMileage;
+    private string model;
+    private string color;
+
+    public int CurrentMileage
+    {
+        get
+        {
+            return currentMileage;
+        }
+        set
+        {
+            currentMileage = value;
+        }
+    }
+
+    public string Color
+    {
+        get
+        {
+            return color;
+        }
+        set
+        {
+            color = value;
+        }
+    }
+
+    public string Model
+    {
+        get
+        {
+            return model;
+        }
+        set
+        {
+            model = value;
+        }
+    }
+
+    public Vehicle(int currentMileage, string model, string color)
+    {
+        CurrentMileage = currentMileage;
+        Model = model;
+        Color = color;
+    }
+
+    public void Drive()
+    {
+        CurrentMileage++;
+    }
+
+    public void Drive(int miles)
+    {
+        if (miles > 0)
+            CurrentMileage += miles;
+    }
+
+    private string DisplayVehicleDetails()
+    {
+        return $"Model: {Model} - Color: {Color} - Current mileage: {CurrentMileage}";
+    }
+
+    protected void SoundHorn()
+    {
+        Console.WriteLine("HONK");
+    }
+}
+ */
+
+
+
+/*          //Ej.82 "Finally"
+//Utilities.cs
+public class Utilities
+{
+    public static List<Vehicle> ReadVehicles(string fileName)
+    {
+        try
+        {
+            List<Vehicle> vehicleList = new List<Vehicle>();
+
+            string path = Path.Combine(Environment.CurrentDirectory, fileName);
+
+            if (File.Exists(path))
+            {
+                string[] vehicles = File.ReadAllLines(path);
+                for (int i = 0; i < vehicles.Length; i++)
+                {
+                    string[] vehicleSplits = vehicles[i].Split(';');
+                    string model = vehicleSplits[0];
+                    string color = vehicleSplits[1];
+                    int currentMileage = int.Parse(vehicleSplits[2]);
+
+                    Vehicle v = new Vehicle(currentMileage, model, color);
+                    vehicleList.Add(v);
+                }
+            }
+
+            return vehicleList;
+        }
+        catch (IndexOutOfRangeException ioorex)
+        {
+            Console.WriteLine(ioorex.Message + " " + ioorex.StackTrace);
+            return null;
+        }
+        catch (FileNotFoundException fnfex)
+        {
+            Console.WriteLine(fnfex.Message + " " + fnfex.StackTrace);
+            return null;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message + " " + ex.StackTrace);
+            return null;
+        }
+        finally
+        {
+            Console.WriteLine("All done parsing");
+        }
+    }
+}
+ */
+
+
+
+/*             //EJERCICIO N° 20 "Execption handling"
+//Utilities.cs
+public static class Utilities
+{
+    public static int DivideValues(string input1, string input2)
+    {
+        try
+        {
+            int value1 = int.Parse(input1);
+            int value2 = int.Parse(input2);
+
+            int result = value1 / value2;
+
+            return result;
+        }
+        catch (FormatException fex)
+        {
+            Console.WriteLine("The entered value was not an integer!");
+            Console.WriteLine(fex.Message);
+            return -1;
+        }
+        catch (DivideByZeroException dex)
+        {
+            Console.WriteLine("Dividing by zero is not possible!");
+            Console.WriteLine(dex.Message);
+            return -2;
+        }
+        catch (Exception ex)
+        {
+            return -3;
+        }
+    }
+}
+ */
+                            //Cierre de modulo 14
