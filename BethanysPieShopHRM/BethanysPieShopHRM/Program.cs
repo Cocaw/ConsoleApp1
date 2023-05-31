@@ -1,77 +1,63 @@
 ﻿using BethanysPieShopHRM;
 using BethanysPieShopHRM.HR;
 
-Console.WriteLine("Creating an employee");
-Console.WriteLine("--------------------\n");
 
-Employee bethany = new Employee("Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25, EmployeeType.Manager);
+List<Employee> employees = new List<Employee>();
 
-Employee george = new("George", "Jones", "george@snowball.be", new DateTime(1984, 3, 28), 30, EmployeeType.Research);
+Console.ForegroundColor = ConsoleColor.Green;
+Console.WriteLine("***********************************");
+Console.WriteLine("* Bethany's Pie Shop Employee App *");
+Console.WriteLine("***********************************");
+Console.ForegroundColor = ConsoleColor.White;
 
+string userSelection;
+Console.ForegroundColor = ConsoleColor.Blue;
 
-bethany.DisplayEmployeeDetails();
+Utilities.CheckForExistingEmployeeFile();
 
-bethany.PerformWork();
-bethany.PerformWork();
-bethany.PerformWork(5);
-bethany.PerformWork();
+do
+{
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine($"Loaded {employees.Count} employee(s)\n\n");
 
-double receivedWageBethany = bethany.ReceiveWage(true);
-Console.WriteLine($"Wage paid (message from Program): {receivedWageBethany}");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.WriteLine("********************");
+    Console.WriteLine("* Select an action *");
+    Console.WriteLine("********************");
 
-//bethany.firstName = "John";
-//bethany.hourlyRate = 10;
+    Console.WriteLine("1: Register employee");
+    Console.WriteLine("2: View all employees");
+    Console.WriteLine("3: Save data");
+    Console.WriteLine("4: Load data");
+    Console.WriteLine("5: Load specific employee");
+    Console.WriteLine("9: Quit application");
+    Console.Write("Your selection: ");
 
-bethany.DisplayEmployeeDetails();
-bethany.PerformWork();
-bethany.PerformWork(12);
-bethany.PerformWork();
-bethany.ReceiveWage();
+    userSelection = Console.ReadLine();
 
+    switch (userSelection)
+    {
+        case "1":
+            Utilities.RegisterEmployee(employees);
+            break;
+        case "2":
+            Utilities.ViewAllEmployees(employees);
+            break;
+        case "3":
+            Utilities.SaveEmployees(employees);
+            break;
+        case "4":
+            Utilities.LoadEmployees(employees);
+            break;
+        case "5":
+            Utilities.LoadEmployeeById(employees);
+            break;
+        case "9": break;
+        default:
+            Console.WriteLine("Invalid selection. Please try again.");
+            break;
+    }
+}
+while (userSelection != "9");
 
-Console.WriteLine("Creating an employee");
-Console.WriteLine("--------------------\n");
-
-george.DisplayEmployeeDetails();
-george.PerformWork();
-george.PerformWork();
-george.PerformWork(3);
-george.PerformWork();
-george.PerformWork(8);
-
-var receivedWageGeorge = george.ReceiveWage(true);
-
-
-//int a = 42;
-//int aCopy = a;
-//aCopy = 100;
-//Console.WriteLine($"Value of a: {a} and value of copy of a: {aCopy}");
-
-//Employee testEmployee = bethany;
-//testEmployee.firstName = "Gill";
-
-//testEmployee.DisplayEmployeeDetails();
-//bethany.DisplayEmployeeDetails();
-
-//bethany.PerformWork(25);
-
-//int minimumBonus = 100;
-//int receivedBonus = bethany.CalculateBonus(minimumBonus);
-//Console.WriteLine($"The minimum bonus is {minimumBonus} and {bethany.firstName} has received a bonus of {receivedBonus}");
-
-
-//int minimumBonus = 100;
-//int bonusTax = 0;
-//int receivedBonus = bethany.CalculateBonusAndBonusTax(minimumBonus, ref bonusTax);
-//Console.WriteLine($"The minimum bonus is {minimumBonus}, the bonus tax is {bonusTax} and {bethany.firstName} has received a bonus of {receivedBonus }");
-
-int minimumBonus = 100;
-int bonusTax;
-int receivedBonus = bethany.CalculateBonusAndBonusTax(minimumBonus, out bonusTax);
-Console.WriteLine($"The minimum bonus is {minimumBonus}, the bonus tax is {bonusTax} and {bethany.firstName} has received a bonus of {receivedBonus}");
-
-
-WorkTask task;
-task.description = "Bake delicious pies";
-task.hours = 3;
-task.PerformWorkTask();
+Console.WriteLine("Thanks for using the application");
